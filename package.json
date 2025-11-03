@@ -12,6 +12,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.9.0",
     "@tailwindcss/vite": "^4.1.12",
+    "clsx": "^2.1.1",
     "lucide-react": "^0.552.0",
     "path": "^0.12.7",
     "react": "^19.1.1",
