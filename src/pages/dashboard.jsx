@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { CustomDialog } from "../components/ui/dialog";
 import { Button } from "../components/ui/Button";
-import { CardContent } from "../components/ui/CardContent";
+import { CardContent } from "@/components/ui/CardContent";
 import clsx from "clsx";
 import { Topbar } from "../components/ui/topBar";
 import { useNavigate } from "react-router-dom";
