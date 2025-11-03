@@ -277,7 +277,7 @@ try{
           <h3 className="text-sm text-gray-600">Unique MSISDNs</h3>
           { forgeries.map((f)=>(
    <div className="contact-per-name space-x-3">
-   <label className=" font-bold" >{(f.name).includes(',') ? f.name.slice(0,f.name.indexOf(',')):f.name}</label>
+   <label className=" font-bold" >{(f.name).includes('=') ? f.name.slice(0,f.name.indexOf('=')).split('|')[0]:f.name.split('|')[0]}</label>
    <label className=" font-bold">{(f.msisdn).includes(',') ? f.msisdn.slice(0,f.msisdn.indexOf(',')):f.msisdn}</label>
      {
     // new Set(forgeries.map((f) => f.MSISDNS.length)).size
@@ -309,7 +309,7 @@ try{
           <tbody className="max-h-200 overflow-auto " >
             {forgeries.map((f) => (
               <tr key={f.id} className="border-b  hover:bg-gray-100 hover:text-green-600 cursor-pointer transition-colors ">
-                <td className="p-2">{ (f.name).includes(',') ? f.name.slice(0,f.name.indexOf(',')):f.name}</td>
+                <td className="p-2">{ (f.name).includes('=') ? f.name.slice(0,f.name.indexOf('=')).replace(/\|/g," "):f.name.split('|')}</td>
                 <td className="p-2">{(f.msisdn).includes(',') ? f.msisdn.slice(0,f.msisdn.indexOf(',')):f.msisdn}</td>
 
                 <td className="p-2">

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Button } from "../components/ui/Button";
 import { Input } from "../components/ui/Input";
-import { Card } from "../components/ui/Card";
-import { CardContent } from "../components/ui/cardContent";
+import { Card,CardContent } from "../components/ui/Card";
+//import { CardContent } from "../components/ui/cardContent";
 
 export const Home = () => {
   const [msisdn, setMsisdn] = useState("0741882818");

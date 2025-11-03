@@ -55,7 +55,7 @@ const forgery=forgeries.find((forgery)=>forgery.id==id);
 
         <div className="space-y-2 text-gray-700">
           <p>
-            <strong className="text-gray-900">Name:</strong> {forgery.name}
+            <strong className="text-gray-900">Name:</strong> {(forgery.name).includes('=') ? forgery.name.slice(0,forgery.name.indexOf('=')).replace(/\|/g," "):forgery.name.split('|')}
           </p>
           <p>
             <strong className="text-gray-900">MSISDN:</strong> {forgery.msisdn}

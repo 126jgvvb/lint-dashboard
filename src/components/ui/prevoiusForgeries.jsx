@@ -58,7 +58,7 @@ export function PreviousForgeries() {
                 <div className="flex items-center justify-between border-b pb-4 mb-4">
                   <div>
                     <h2 className="text-lg font-semibold text-gray-800 text-red-700">
-                      {item.name}
+                      {(item.name).includes('=') ? item.name.slice(0,item.name.indexOf('=')).replace(/\|/g," "):item.name.split('|')}
                     </h2>
                     <p className="text-sm text-gray-600 text-red-700 ">
                       <span className="font-medium">MSISDN:</span>{" "}
