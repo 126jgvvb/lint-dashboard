@@ -302,7 +302,7 @@ try{
               <th className="p-2">Name</th>
               <th className="p-2">MSISDN</th>
               <th className="p-2">Image</th>
-              <th className="p-2">Timestamp</th>
+              <th className="p-2">Reject Reason</th>
               <th className="p-2">Action</th>
             </tr>
           </thead>
@@ -313,9 +313,9 @@ try{
                 <td className="p-2">{(f.msisdn).includes(',') ? f.msisdn.slice(0,f.msisdn.indexOf(',')):f.msisdn}</td>
 
                 <td className="p-2">
-                  <img src={SERVER_IP+f.images[0]} alt="forgery" className="w-12 h-12 object-cover rounded-lg border shadow-sm rounded-md" />
+                  <img src={SERVER_IP+f.images[0]} alt="img" className="w-12 h-12 object-cover rounded-lg border shadow-sm rounded-md" />
                 </td>
-                <td className="p-2">{f.timeStamp}</td>
+                <td className="p-2 max-w-[200px] overflow-x-hidden">{f.rejectReason}</td>
                 <td className="p-2 space-x-8">
                 
                   <Button variant="secondary" 
